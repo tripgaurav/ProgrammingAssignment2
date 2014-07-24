@@ -1,5 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The functions in this program create a matrix and compute its inverse. For faster operations, the program uses
+## caching. e.g. if inverse of matrix has already been calculated, the cached results are displayed (no re-calculation)
 
 ## This function creates a special vector, which is really a list containing a function to set and 
 ## get the matrix as well as to set and get its inverse
@@ -23,7 +23,7 @@ makeCacheMatrix <- function(matrix = matrix()) {
 cacheSolve <- function(matrix = matrix(), ...) {
     invMatrix <- matrix$getmatrix()
     if(!is.null(invMatrix)){
-        message("getting cached data")
+        message("Getting cached data")
         return(invMatrix)
     }
     properMatrix <- matrix$get()
